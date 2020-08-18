@@ -2,6 +2,7 @@
 	width: 100%;
 	display: flex;
 	margin: 0 auto;
+	overflow: hidden;
 
 	@include respond(tablet-portrait) {
 		flex-direction: column;
@@ -14,7 +15,7 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		border-radius: 30px;
+		border-radius: 50%;
 	}
 
 	&__persons {
@@ -165,10 +166,10 @@
 			@include respond(phone) {
 				text-align: left;
 				max-width: none;
-				font-size: 42px;
+				font-size: 42.5px;
 				margin-bottom: 15px;
 				margin-top: 0;
-				line-height: 1.2;
+				line-height: 1;
 			}
 		}
 
@@ -185,6 +186,7 @@
 				text-align: left;
 				font-size: 16px;
 				font-weight: 400;
+				margin-top: 0;
 			}
 		}
 
@@ -211,12 +213,12 @@
 			overflow: hidden;
 
 			img {
-				height: 100px;
+				height: 80px;
 				display: block;
 				position: absolute;
 
 				@include respond(tablet-portrait) {
-					height: 75px;
+					height: 60px;
 				}
 			}
 
