@@ -1,0 +1,68 @@
+.speech-bubble {
+	visibility: hidden;
+	opacity: 0;
+	display: inline-block;
+	position: absolute;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	color: $color-dark-blue;
+	background: $color-cream;
+	border: 3px solid $color-dark-blue;
+	width: 250px;
+	border-radius: 15px;
+	padding: 10px;
+
+	transition: opacity 0.5s ease;
+
+	@include respond(phone) {
+		font-size: 12px;
+		border: 2px solid $color-dark-blue;
+		width: 200px;
+		padding: 5px;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		border: 20px solid transparent;
+	}
+
+	&--top::after {
+		top: 0;
+		left: 50%;
+		border-bottom-color: $color-dark-blue;
+		border-top: 0;
+		margin-left: -20px;
+		margin-top: -20px;
+	}
+
+	&--right::after {
+		right: 0;
+		top: 50%;
+		border-left-color: $color-dark-blue;
+		border-right: 0;
+		margin-top: -20px;
+		margin-right: -20px;
+	}
+
+	&--bottom::after {
+		bottom: 0;
+		left: 50%;
+		border-top-color: $color-dark-blue;
+		border-bottom: 0;
+		margin-left: -20px;
+		margin-bottom: -20px;
+	}
+
+	&--left::after {
+		left: 0;
+		top: 50%;
+		border-right-color: $color-dark-blue;
+		border-left: 0;
+		margin-top: -20px;
+		margin-left: -20px;
+	}
+}
